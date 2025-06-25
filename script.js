@@ -63,3 +63,22 @@
     el: '.swiper-scrollbar',
   },
 });
+
+//section reveal
+  function revealSections() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (const section of reveals) {
+      const windowHeight = window.innerHeight;
+      const elementTop = section.getBoundingClientRect().top;
+      const revealPoint = 150; // adjust if needed
+
+      if (elementTop < windowHeight - revealPoint) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active'); // Optional: remove to reset
+      }
+    }
+  }
+
+  window.addEventListener('scroll', revealSections);
+  window.addEventListener('load', revealSections); // Initial load check
