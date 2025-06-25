@@ -62,8 +62,6 @@
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-});
-
 //section reveal
   function revealSections() {
     const reveals = document.querySelectorAll('.reveal');
